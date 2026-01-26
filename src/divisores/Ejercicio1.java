@@ -23,8 +23,7 @@ public class Ejercicio1 {
 		int cont = 0;
 		
 		for(int i=2; i<=number; i++) {
-			boolean esDivisor = number%i==0;
-			if(esDivisor && esPrimo(i)) {
+			if(number%i==0 && isPrime(i)) {
 				cont++;
 			}
 		}
@@ -32,10 +31,10 @@ public class Ejercicio1 {
 		return cont;
 	}
 	
-	public static boolean esPrimo(int numero) {
+	public static boolean isPrime(long number) {
 		boolean esPrimo = true;
-		for(int i=2; i<numero; i++) {
-			int modulo = numero%i;
+		for(int i=2; i<number; i++) {
+			long modulo = number%i;
 			if(modulo == 0) {
 				esPrimo = false;
 				break;
